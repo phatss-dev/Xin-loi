@@ -98,6 +98,16 @@
     <source src="xl.mp3" type="audio/mpeg">
   </audio>
 
+  
+  <!-- Tự phát nhạc khi người dùng click -->
+  <script>
+    document.body.addEventListener('click', function playMusicOnce() {
+      const audio = document.getElementById('audio');
+      audio.play();
+      document.body.removeEventListener('click', playMusicOnce);
+    });
+  </script>
+  
   <!-- Hiệu ứng trái tim bay -->
   <script>
     function createHeart() {
